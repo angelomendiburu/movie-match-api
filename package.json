@@ -1,0 +1,28 @@
+{
+  "name": "movie-match-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "search": "node movie.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelomendiburu/movie-match-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelomendiburu/movie-match-api/issues"
+  },
+  "homepage": "https://github.com/angelomendiburu/movie-match-api#readme",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
