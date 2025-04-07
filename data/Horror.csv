@@ -1,4 +1,3 @@
-Title,Year,Director,Rating
-Echoes of Fear,2011,H. King,6.8
-The Hollow Night,2016,Y. Frost,7.2
-Whispers Below,2020,P. Silva,7.5
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0081505,The Shining,1980,"Drama, Horror",Stanley Kubrick,"Jack Nicholson, Shelley Duvall, Danny Lloyd",A family heads to an isolated hotel where an evil presence influences the father into violence.,8.4,146
+tt0078748,Alien,1979,"Horror, Sci-Fi",Ridley Scott,"Sigourney Weaver, Tom Skerritt, John Hurt",The crew of a commercial spacecraft encounter a deadly lifeform after investigating a distress signal.,8.5,117

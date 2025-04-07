@@ -1,4 +1,3 @@
-Title,Year,Director,Rating
-Realm of Echoes,2011,T. Wilde,7.2
-The Crystal Path,2014,R. Moon,7.4
-Dragonsong,2019,E. Rayne,7.8
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0120737,The Lord of the Rings: The Fellowship of the Ring,2001,"Action, Adventure, Drama, Fantasy",Peter Jackson,"Elijah Wood, Ian McKellen, Orlando Bloom",A meek Hobbit and eight companions set out on a journey to destroy a powerful ring.,8.8,178
+tt0107290,Jurassic Park,1993,"Action, Adventure, Sci-Fi, Fantasy",Steven Spielberg,"Sam Neill, Laura Dern, Jeff Goldblum","During a preview tour, a theme park suffers a major power breakdown, releasing cloned dinosaurs.",8.2,127
