@@ -1,3 +1,4 @@
-node_modules/
+# Ignorar archivos sensibles
 .env
+node_modules/
 output/
