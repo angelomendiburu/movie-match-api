@@ -1,0 +1,5 @@
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0245429,Spirited Away,2001,"Animation, Adventure, Family",Hayao Miyazaki,"Daveigh Chase, Suzanne Pleshette, Miyu Irino","During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",8.6,125
+tt0095327,Grave of the Fireflies,1988,"Animation, Drama, War",Isao Takahata,"Tsutomu Tatsumi, Ayano Shiraishi, Akemi Yamaguchi","A young boy and his little sister struggle to survive in Japan during World War II.",8.5,89
+tt0110357,The Lion King,1994,"Animation, Adventure, Drama",Roger Allers and Rob Minkoff,"Matthew Broderick, Jeremy Irons, James Earl Jones","Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",8.5,88
+// ...existing code...

@@ -1,8 +1,34 @@
 const movieService = require('../services/movieService');
 
 function getAllMovies(req, res) {
+    const { genre } = req.query;
+
     movieService.getAllMoviesService((movies) => {
-        res.json(movies); // Responder con la lista de películas en formato JSON
+        if (genre) {
+            const filteredMovies = movies.filter(movie => {
+                // Asegurarse de que movie.genre sea una cadena válida
+                if (typeof movie.genre === 'string') {
+                    const normalizedGenres = movie.genre
+                        .toLowerCase()
+                        .replace(/"/g, '') // Eliminar comillas
+                        .split(',') // Dividir por comas
+                        .map(g => g.trim()); // Quitar espacios extra
+                    return normalizedGenres.includes(genre.toLowerCase().trim());
+                }
+                return false;
+            });
+
+            // Verificar si se encontraron películas del género solicitado
+            if (filteredMovies.length === 0) {
+                return res.status(404).json({ error: `No se encontraron películas del género: ${genre}` });
+            }
+
+            // Retornar solo las películas filtradas
+            return res.status(200).json(filteredMovies);
+        }
+
+        // Retornar todas las películas si no se especifica un género
+        res.status(200).json(movies);
     });
 }
 
@@ -100,7 +126,7 @@ function searchMoviesByCriteria(req, res) {
     });
 }
 
-module.exports = { 
+module.exports = {  
     getAllMovies, 
     getMovieByIdOrTitle, 
     searchMovieByTitle, 

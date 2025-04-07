@@ -1,0 +1,7 @@
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0111161,The Shawshank Redemption,1994,"Drama",Frank Darabont,"Tim Robbins, Morgan Freeman, Bob Gunton","Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",9.3,142
+tt0068646,The Godfather,1972,"Crime, Drama",Francis Ford Coppola,"Marlon Brando, Al Pacino, James Caan","The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",9.2,175
+tt0468569,The Dark Knight,2008,"Action, Crime, Drama",Christopher Nolan,"Christian Bale, Heath Ledger, Aaron Eckhart","When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",9.0,152
+tt0071562,The Godfather Part II,1974,"Crime, Drama",Francis Ford Coppola,"Al Pacino, Robert De Niro, Robert Duvall","The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",9.0,202
+tt0050083,12 Angry Men,1957,"Crime, Drama",Sidney Lumet,"Henry Fonda, Lee J. Cobb, Martin Balsam","A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",9.0,96
+// ...existing code...

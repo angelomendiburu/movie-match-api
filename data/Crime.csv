@@ -1,0 +1,6 @@
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0068646,The Godfather,1972,"Crime, Drama",Francis Ford Coppola,"Marlon Brando, Al Pacino, James Caan","The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",9.2,175
+tt0071562,The Godfather Part II,1974,"Crime, Drama",Francis Ford Coppola,"Al Pacino, Robert De Niro, Robert Duvall","The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",9.0,202
+tt0050083,12 Angry Men,1957,"Crime, Drama",Sidney Lumet,"Henry Fonda, Lee J. Cobb, Martin Balsam","A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",9.0,96
+tt0110912,Pulp Fiction,1994,"Crime, Drama",Quentin Tarantino,"John Travolta, Uma Thurman, Samuel L. Jackson","The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",8.9,154
+// ...existing code...

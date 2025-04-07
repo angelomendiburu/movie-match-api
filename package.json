@@ -20,7 +20,8 @@
   "homepage": "https://github.com/angelomendiburu/movie-match-api#readme",
   "dependencies": {
     "csv-parser": "^3.2.0",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

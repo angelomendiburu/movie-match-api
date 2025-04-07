@@ -1,0 +1,6 @@
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0120815,Saving Private Ryan,1998,"Drama, War",Steven Spielberg,"Tom Hanks, Matt Damon, Tom Sizemore","Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",8.6,169
+tt0047478,Seven Samurai,1954,"Action, Drama, War",Akira Kurosawa,"Toshirô Mifune, Takashi Shimura, Keiko Tsushima","A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.",8.6,207
+tt0034583,Casablanca,1942,"Drama, Romance, War",Michael Curtiz,"Humphrey Bogart, Ingrid Bergman, Paul Henreid","A cynical American expatriate struggles to decide whether or not he should help his former lover and her fugitive husband escape French Morocco.",8.5,102
+tt0095327,Grave of the Fireflies,1988,"Animation, Drama, War",Isao Takahata,"Tsutomu Tatsumi, Ayano Shiraishi, Akemi Yamaguchi","A young boy and his little sister struggle to survive in Japan during World War II.",8.5,89
+// ...existing code...

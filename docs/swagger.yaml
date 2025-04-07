@@ -1,0 +1,137 @@
+openapi: 3.0.0
+info:
+  title: Movie Match API
+  version: 1.0.0
+  description: API para obtener películas aleatorias y más
+servers:
+  - url: http://localhost:3000
+paths:
+  /:
+    get:
+      summary: Obtener una película aleatoria
+      description: Devuelve una película aleatoria en formato JSON
+      responses:
+        '200':
+          description: Película obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    example: Inception
+                  year:
+                    type: integer
+                    example: 2010
+                  genre:
+                    type: string
+                    example: Sci-Fi
+        '404':
+          description: No se encontró la ruta
+  /movies:
+    get:
+      summary: Obtener todas las películas
+      description: Devuelve una lista de todas las películas disponibles.
+      parameters:
+        - name: genre
+          in: query
+          description: Filtrar películas por género.
+          required: false
+          schema:
+            type: string
+        - name: year
+          in: query
+          description: Filtrar películas por año de lanzamiento.
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Una lista de películas.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      description: ID único de la película.
+                    title:
+                      type: string
+                      description: Título de la película.
+                    genre:
+                      type: string
+                      description: Género de la película.
+                    year:
+                      type: integer
+                      description: Año de lanzamiento.
+              example:
+                - id: 1
+                  title: "Inception"
+                  genre: "Sci-Fi"
+                  year: 2010
+                - id: 2
+                  title: "The Godfather"
+                  genre: "Crime"
+                  year: 1972
+  /movies/{id}:
+    get:
+      summary: Obtener detalles de una película por ID
+      description: Devuelve los detalles de una película específica según su ID.
+      parameters:
+        - name: id
+          in: path
+          description: ID único de la película.
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalles de la película obtenidos exitosamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: ID único de la película.
+                  title:
+                    type: string
+                    description: Título de la película.
+                  genre:
+                    type: string
+                    description: Género de la película.
+                  year:
+                    type: integer
+                    description: Año de lanzamiento.
+                  director:
+                    type: string
+                    description: Director de la película.
+                  actors:
+                    type: string
+                    description: Actores principales.
+                  plot:
+                    type: string
+                    description: Sinopsis de la película.
+                  imdb_rating:
+                    type: number
+                    description: Calificación en IMDB.
+                  runtime_minutes:
+                    type: integer
+                    description: Duración en minutos.
+              example:
+                id: "tt0111161"
+                title: "The Shawshank Redemption"
+                genre: "Drama"
+                year: 1994
+                director: "Frank Darabont"
+                actors: "Tim Robbins, Morgan Freeman, Bob Gunton"
+                plot: "Over the course of several years, two convicts form a friendship..."
+                imdb_rating: 9.3
+                runtime_minutes: 142
+        '404':
+          description: Película no encontrada.

@@ -1,0 +1,4 @@
+id,title,year,genre,director,actors,plot,imdb_rating,runtime_minutes
+tt0118799,Life Is Beautiful,1997,"Comedy, Drama, Romance",Roberto Benigni,"Roberto Benigni, Nicoletta Braschi, Giorgio Cantarini","When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor, and imagination to protect his son from the dangers around their camp.",8.6,116
+tt0027977,Modern Times,1936,"Comedy, Drama, Romance",Charles Chaplin,"Charles Chaplin, Paulette Goddard, Henry Bergman","The Tramp struggles to live in modern industrial society with the help of a young homeless woman.",8.5,87
+// ...existing code...

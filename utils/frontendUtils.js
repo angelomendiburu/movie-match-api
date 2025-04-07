@@ -7,7 +7,7 @@ function showSuggestions(value) {
     fetch('/autocomplete?query=' + value)
         .then(response => response.json())
         .then(data => {
-            let suggestions = data.map(movie => '<li><a href="/movies/search/' + movie.title + '">' + movie.title + '</a></li>').join('');
+            let suggestions = data.map(movie => '<li><a href="/movies/search/' + encodeURIComponent(movie.title) + '">' + movie.title + '</a></li>').join('');
             document.getElementById('suggestions').innerHTML = '<ul>' + suggestions + '</ul>';
         });
 }

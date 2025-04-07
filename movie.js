@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { getAllMovies, getMovieByTitle, getMovieById } = require('./movieUtils'); // Importar funciones necesarias
+const fs = require('fs');
+const csv = require('csv-parser');
 
 // Define rutas para datos de películas
 router.get('/', (req, res) => {
@@ -31,7 +33,7 @@ router.get('/:id_or_name', (req, res) => {
 });
 
 router.get('/search/:title', (req, res) => {
-    const title = req.params.title;
+    const title = decodeURIComponent(req.params.title.trim()); // Decodificar y eliminar espacios adicionales
     getMovieByTitle(title, (movie) => {
         if (movie) {
             res.send(`
@@ -42,6 +44,7 @@ router.get('/search/:title', (req, res) => {
                 <body>
                     <div class="container">
                         <h1>Detalles de la película: ${movie.title}</h1>
+                        ${movie.image ? `<img src="${movie.image}" alt="${movie.title}" style="max-width: 300px; margin-bottom: 20px;">` : '<p>Imagen no disponible</p>'}
                         <p><strong>Año:</strong> ${movie.year}</p>
                         <p><strong>Género:</strong> ${movie.genre}</p>
                         <p><strong>Director:</strong> ${movie.director}</p>
@@ -49,25 +52,36 @@ router.get('/search/:title', (req, res) => {
                         <p><strong>Sinopsis:</strong> ${movie.plot}</p>
                         <p><strong>IMDB Rating:</strong> ${movie.imdb_rating}</p>
                         <p><strong>Duración:</strong> ${movie.runtime_minutes} minutos</p>
+                        <a href="/">Volver</a>
                     </div>
                 </body>
                 </html>
             `);
         } else {
-            res.send(`
-                <html>
-                <head>
-                    <link rel="stylesheet" type="text/css" href="/styles.css">
-                </head>
-                <body>
-                    <div class="container">
-                        <h1>Película no encontrada</h1>
-                    </div>
-                </body>
-                </html>
-            `);
+            res.status(404).send('<h1>Película no encontrada</h1>');
         }
     });
+});
+
+// Route to fetch movies by genre
+router.get('/genre/:genre', (req, res) => {
+    const genre = req.params.genre;
+    const filePath = `./data/${genre}.csv`;
+
+    if (!fs.existsSync(filePath)) {
+        return res.status(404).json({ error: `No se encontró el archivo para el género: ${genre}` });
+    }
+
+    const movies = [];
+    fs.createReadStream(filePath)
+        .pipe(csv())
+        .on('data', (data) => movies.push(data))
+        .on('end', () => {
+            res.json(movies);
+        })
+        .on('error', (err) => {
+            res.status(500).json({ error: 'Error al leer el archivo.' });
+        });
 });
 
 module.exports = router;
