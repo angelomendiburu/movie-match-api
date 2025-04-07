@@ -90,4 +90,9 @@ app.use((req, res, next) => {
 
 app.use(errorHandler); // Middleware de manejo de errores
 
+app.use((err, req, res, next) => {
+    console.error(err.stack); // Log del error
+    res.status(500).json({ error: "Error interno del servidor" });
+});
+
 module.exports = app;
